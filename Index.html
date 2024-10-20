@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Vendas - AGB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="agb_logo.png" alt="Logo AGB" class="logo">
+            <h1>Calculadora de Vendas - AGB</h1>
+        </header>
+        <div class="calculator">
+            <div class="section">
+                <h2>Calculando VV</h2>
+                <label for="custo">Custo Bruto (C):</label>
+                <input type="number" id="custo" name="custo" step="0.01">
+                <button onclick="calcularVV()">Calcular VV</button>
+                <p id="resultadoVV"></p>
+            </div>
+            <div class="section">
+                <h2>Calculando Preços dos Marketplaces</h2>
+                <label for="valorVenda">Valor de Venda (VV):</label>
+                <input type="number" id="valorVenda" name="valorVenda" step="0.01">
+                <button onclick="calcularPrecos()">Calcular Preços</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marketplace</th>
+                            <th>Sobra da Venda (SV)</th>
+                            <th>De Fal (D)</th>
+                            <th>Margem</th>
+                            <th>Preço Final</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultados">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
